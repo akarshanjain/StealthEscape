@@ -12,5 +12,5 @@ title:  Team
 ## Eliya Khajeiee
 ***UCI Net ID***: ekhajeie
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Kafai Lei
+***UCI Net ID***: kflei
