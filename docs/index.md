@@ -17,11 +17,10 @@ StealthEscape is a stealth-based AI game built within Minecraft, where an agent 
 - [Project Malmo Documentation](https://www.microsoft.com/en-us/research/project/project-malmo/)
 - [Project Malmo Github Repository](https://github.com/microsoft/malmo)  
 
-## **Source Code**
+#### *Source Code*
 🔗 [Github Repository](https://github.com/akarshanjain/StealthEscape)
 
-Reports:
-
+#### *Reports*  
 📄- [Proposal](proposal.html)  
 📄- [Status](status.html)  
 📄- [Final](final.html)  
