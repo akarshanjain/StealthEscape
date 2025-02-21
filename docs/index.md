@@ -19,8 +19,8 @@ StealthEscape is a stealth-based AI game built within Minecraft, where an agent 
 
 Reports:
 
-📄- [Proposal](proposal.html)
-📄- [Status](status.html)
-📄- [Final](final.html)
+📄- [Proposal](proposal.html)  
+📄- [Status](status.html)  
+📄- [Final](final.html)  
 
 Stay tuned for updates as we refine **StealthEscape**! 🎮
