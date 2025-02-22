@@ -12,13 +12,13 @@ refined over time, improving its ability to achieve the mission's goal.
 
 [Take a look at our status update!](https://www.youtube.com/watch?v=Ry0RnIFcsuc)
 <iframe width="560" height="315" 
-    src="https://www.youtube.com/watch?v=Ry0RnIFcsuc" 
+    src="https://www.youtube.com/waRy0RnIFcsuc" 
     frameborder="0" 
     allowfullscreen>
 </iframe>
 
 <iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/VIDEO_ID" 
+    src="https://youtu.be/Ry0RnIFcsuc" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
