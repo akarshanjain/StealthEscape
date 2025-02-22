@@ -10,19 +10,8 @@ and exploitation to efficiently navigate through the maze while avoiding detecti
 to obstacles) and adapt its behavior to minimize the risk of falling into hazards or being caught by guards. By leveraging Q-learning and a reward-based system, the agent's actions are 
 refined over time, improving its ability to achieve the mission's goal. 
 
-[Take a look at our status update!](https://www.youtube.com/watch?v=Ry0RnIFcsuc)
-<iframe width="560" height="315" 
-    src="https://www.youtube.com/waRy0RnIFcsuc" 
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
-
-<iframe width="560" height="315" 
-    src="https://youtu.be/Ry0RnIFcsuc" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-</iframe>
+### [Take a look at our status update!](https://www.youtube.com/watch?v=Ry0RnIFcsuc)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ry0RnIFcsuc?si=9hcNZr1Le-3VbU9x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Approach  
 This project utilizes **Q-learning**, a reinforcement learning algorithm, to train an agent to navigate a maze filled with hazards like lava, gaps, and zombies. The agent receives 
