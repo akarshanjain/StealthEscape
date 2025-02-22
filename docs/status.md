@@ -24,7 +24,12 @@ Training consists of 100 cycles, with the agent interacting with the environment
 its navigation strategy, avoiding hazards and optimizing its path to the goal.
 
 ## Evaluation  
-TODO
+The initial maze-solving agent had significant limitations that affected its performance. The basic state space, consisting of just x, y, z coordinates, meant the agent often fell into gaps and struggled to navigate effectively. With only three possible actions: moving forward and making 45-degree turns. The agent's movement was rigid and unnatural, leading to inefficient pathfinding and frequent collisions.
+
+The improved implementation transforms the agent's capabilities through several key enhancements. By expanding the state space to include comprehensive environmental awareness, including wall detection and goal orientation, the agent now makes more informed decisions. The addition of smoother turning angles and strafing movement allows for more precise navigation. A refined reward system encourages the agent to explore safely while making steady progress toward the goal.
+
+The results speak for themselves (in the video) the new agent explores the maze more thoroughly while avoiding hazards, demonstrates smoother navigation patterns, and shows higher success rates in exploring the maze completely. This improvement stems from the agent's enhanced ability to understand its surroundings and make intelligent pathfinding decisions, rather than the trial-and-error approach of the previous version.
+
 
 ## Remaining Goals and Challenges 
 As we move forward, our primary goal is to refine the reinforcement learning agent's ability to navigate the maze more efficiently. While the agent is capable of completing the maze, its 
