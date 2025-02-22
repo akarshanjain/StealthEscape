@@ -8,7 +8,9 @@ The StealthEscape project is focused on developing a reinforcement learning (RL)
 a maze, avoiding hazards such as lava pits, and evading zombie guards. The core objective is to optimize the agent’s pathfinding strategy using RL, incorporating a combination of exploration 
 and exploitation to efficiently navigate through the maze while avoiding detection. The agent is trained to make decisions based on its current state (position, light levels, and proximity 
 to obstacles) and adapt its behavior to minimize the risk of falling into hazards or being caught by guards. By leveraging Q-learning and a reward-based system, the agent's actions are 
-refined over time, improving its ability to achieve the mission's goal.  
+refined over time, improving its ability to achieve the mission's goal. 
+
+[Take a look at our status update!](https://www.youtube.com/watch?v=Ry0RnIFcsuc)
 
 ## Approach  
 This project utilizes **Q-learning**, a reinforcement learning algorithm, to train an agent to navigate a maze filled with hazards like lava, gaps, and zombies. The agent receives 
