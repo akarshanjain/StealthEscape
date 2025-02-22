@@ -28,7 +28,7 @@ The initial maze-solving agent had significant limitations that affected its per
 
 The improved implementation transforms the agent's capabilities through several key enhancements. By expanding the state space to include comprehensive environmental awareness, including wall detection and goal orientation, the agent now makes more informed decisions. The addition of smoother turning angles and strafing movement allows for more precise navigation. A refined reward system encourages the agent to explore safely while making steady progress toward the goal.
 
-The results speak for themselves (in the video) the new agent explores the maze more thoroughly while avoiding hazards, demonstrates smoother navigation patterns, and shows higher success rates in exploring the maze completely. This improvement stems from the agent's enhanced ability to understand its surroundings and make intelligent pathfinding decisions, rather than the trial-and-error approach of the previous version.
+The results speak for themselves (in the video: https://youtu.be/FyNuD8hs58c) the new agent explores the maze more thoroughly while avoiding hazards, demonstrates smoother navigation patterns, and shows higher success rates in exploring the maze completely. This improvement stems from the agent's enhanced ability to understand its surroundings and make intelligent pathfinding decisions, rather than the trial-and-error approach of the previous version.
 
 
 ## Remaining Goals and Challenges 
