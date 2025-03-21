@@ -21,6 +21,7 @@ The disadvantages of our baseline approach included limited observational space 
 Initialize Q-network, target Q-network, replay buffer, optimizer
 Set epsilon = EPSILON_START
 
+```
 For each cycle:
     Start mission
     prev_state = None
@@ -54,7 +55,7 @@ For each cycle:
                 Update target Q-network
 
     Print total_reward
-
+```
 
 Now, we made the agent smarter and it makes better decisions, the code has more detail about the environment, not just the agent's position. The agent can now sense how close the walls are, which way the goal is, and know more about the dangers near it. This extra information allows the agent to understand the surroundings a lot better and make much better decisions. The agent can move sideways and turn more smoothly, which helps it move better in the maze and avoid dangers more easily. This new movement style is also closer to how things move in real life so it helps in Minecraft.
 
@@ -65,7 +66,7 @@ The new reward system allows safer exploration, and the agent can handle dynamic
 
 But this comes with a greater computational complexity due to a deeper model. It also can overfit the expanded state space, especially if the environment changes too quickly. The training time is also longer since the network is deeper and the agent is trying to learn in a larger environment.
 
-
+```
 Initialize Q-values Q(state, action) arbitrarily
 Initialize deep neural network model for Q-value approximation
 For each episode:
@@ -80,7 +81,7 @@ For each episode:
             Target Q-value = r + gamma * max(Q-network(s', a'))
             Update Q-network parameters using loss function (Predicted Q - Target Q)^2
         If s' is terminal, break
-
+```
 
 
 
