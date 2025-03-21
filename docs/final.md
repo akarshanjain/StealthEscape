@@ -18,43 +18,38 @@ For our final model, we built it on an earlier Q learning network that trained t
 One advantage of our baseline approach is that it is simple and efficient, it is easy to implement, and computationally light, so it trains faster and doesn't require large amounts of data. It is also stable since the Q-values are updated periodically and rewards are fixed. 
 The disadvantages of our baseline approach included limited observational space and action space. Using only basic position tracking meant that the agent couldn't effectively assess cues in the environment and limited the ability to make nuanced decisions. Using a fixed reward system also doesn't encourage exploration or safer decision-making beyond simply reaching the goal. The agent relied too much on static environments, so it was hard to generalize. 
 
-Initialize Q-network, target Q-network, replay buffer, optimizer
+```
+Initialize Q-values Q(state, action) arbitrarily
+Initialize target Q-network and Q-network models
+Initialize replay buffer, optimizer
 Set epsilon = EPSILON_START
 
-```
 For each cycle:
-    Start mission
-    prev_state = None
+    Initialize state s
     total_reward = 0
-
+    
     While mission is running:
-        state = Get current state
-        If state is valid:
-            If random() < epsilon:
-                action = Random action
-            Else:
-                action = Max Q-value action
+        Choose action a using epsilon-greedy policy (random action with probability epsilon, else max Q-value action)
+        Perform action a, observe reward r and next state s'
+        
+        Store experience (s, a, r, s') in replay buffer
+        
+        If replay buffer size >= BATCH_SIZE:
+            Sample a batch from buffer using prioritized sampling
+            For each experience (s, a, r, s') in the batch:
+                Predicted Q-value = Q-network(s, a)
+                Target Q-value = r + gamma * max(Q-network(s', a'))
+                Compute loss as (Predicted Q - Target Q)^2
+                Update Q-network parameters using optimizer
+                
+        If cycle % TARGET_UPDATE_FREQ == 0:
+            Update target Q-network with Q-network parameters
 
-            Perform action
-            next_state = Get next state
-            reward = Calculate reward
-
-            Add experience to replay buffer
-
-            If replay buffer size >= BATCH_SIZE:
-                Sample batch from buffer
-                For each experience in batch:
-                    Compute Q-values
-                    Compute target Q-values
-                    Calculate loss
-                    Update Q-network
-
-            epsilon = epsilon * EPSILON_DECAY
-
-            If cycle % TARGET_UPDATE_FREQ == 0:
-                Update target Q-network
+        epsilon = epsilon * EPSILON_DECAY
+        s = s'  # Move to next state
 
     Print total_reward
+
 ```
 
 Now, we made the agent smarter and it makes better decisions, the code has more detail about the environment, not just the agent's position. The agent can now sense how close the walls are, which way the goal is, and know more about the dangers near it. This extra information allows the agent to understand the surroundings a lot better and make much better decisions. The agent can move sideways and turn more smoothly, which helps it move better in the maze and avoid dangers more easily. This new movement style is also closer to how things move in real life so it helps in Minecraft.
