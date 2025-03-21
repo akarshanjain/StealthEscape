@@ -82,7 +82,108 @@ For each episode:
 
     
 ## Evaluation  
-  
+
+Our evaluation of the StealthEscape project demonstrates significant improvements between our baseline and enhanced reinforcement learning models. The results highlight dramatic performance gains in both learning efficiency and maze navigation success.
+
+### Quantitative Evaluation
+
+#### Training Performance & Convergence
+
+The enhanced model showed remarkable improvements in learning efficiency and overall performance compared to our baseline:
+
+| Metric | Baseline Model | Enhanced Model | Improvement |
+|--------|---------------|----------------|-------------|
+| Episodes to convergence | ~500 | ~300 | 40% faster |
+| Final average reward | 0.7 | 0.9 | 28.6% higher |
+| Episodes until first goal completion | Never reached | 18 | Infinite improvement |
+| Cumulative reward convergence | 0.55 | 0.9 | 63.6% higher |
+
+pic here
+*Figure 1: Learning curves showing average reward per episode during training. The baseline model (blue) slowly converges to 0.7 over 500 episodes, while the enhanced model (orange) reaches 0.9 in just 300 episodes.*
+
+A key finding was that despite running the baseline model for approximately one week of continuous training, it never successfully completed the maze. In stark contrast, our enhanced model began reaching the goal consistently after just 18 episodes on average, even in more complex maze configurations.
+
+#### Loss Function Analysis
+
+The training stability between models showed significant differences:
+
+- The baseline model's loss started at approximately 1.0 and decreased to around 0.2 after 500 episodes, but with considerable fluctuation
+- Our enhanced model demonstrated a much steadier downward trend in loss, indicating more stable and consistent learning
+
+(pic here)
+
+*Figure 2: Comparison of loss function during training for baseline (blue) and enhanced (orange) models. The enhanced model shows a more consistent, stable decreasing trend.*
+
+#### Reward Accumulation
+
+The cumulative reward metrics further highlight the performance gap:
+
+- Baseline model: Cumulative reward plateaued at approximately 0.55
+- Enhanced model: Cumulative reward consistently reached 0.9
+
+This substantial improvement in reward accumulation demonstrates that our enhanced model was not only more effective at reaching the goal but also did so while making better decisions throughout its journey.
+
+### Qualitative Evaluation
+
+#### Navigation Success Analysis
+
+The most dramatic difference between models was in their ability to complete the navigation task:
+
+- **Baseline Model**: Despite extensive training (approximately one week of continuous local execution), the baseline model never successfully navigated to the end of the maze
+- **Enhanced Model**: Successfully completed the maze after an average of just 18 episodes, even when tested on more complex maze configurations
+
+This represents a fundamental breakthrough in performance rather than merely an incremental improvement.
+
+#### Decision Quality Observation
+
+Through qualitative observation of agent behavior, we noted several improvements in the enhanced model:
+
+1. **Path Optimization**: The enhanced model quickly learned to take more direct paths, avoiding unnecessary exploration of dead ends
+2. **Hazard Avoidance**: Demonstrated much more consistent avoidance of lava hazards
+3. **Guard Evasion**: Showed sophisticated behavior when encountering zombie guards, including waiting and timing movements to avoid detection
+
+#### Environmental Complexity Handling
+
+We tested both models across maze configurations with increasing complexity:
+
+1. **Simple Maze**: Basic layout with minimal obstacles
+2. **Hazard Maze**: Multiple lava obstacles throughout
+3. **Guard Maze**: Patrolling zombie guards with various movement patterns
+4. **Complex Maze**: Combination of multiple hazards, guards, and alternative paths
+
+The enhanced model performed consistently well across all configurations, while the baseline model struggled even with simpler arrangements. Most notably, the enhanced model successfully navigated complex mazes that the baseline model could never complete.
+
+### Analysis of Improvements
+
+Through our evaluation, we identified the key factors that contributed to the dramatic performance improvements:
+
+1. **Expanded Observation Space**: Providing the agent with richer environmental information (wall proximity, goal direction, comprehensive danger awareness) enabled much more informed decision-making
+2. **Enhanced Action Space**: The ability to move sideways and make smoother turns allowed for more nuanced navigation strategies
+3. **Deeper Neural Network**: Improved the model's ability to process the expanded observation space and make more sophisticated decisions
+4. **Prioritized Experience Replay**: Focusing learning on the most important experiences accelerated the training process significantly
+5. **Refined Reward System**: Better feedback for safer exploration encouraged more effective maze navigation
+
+The combination of these improvements transformed a model that could never complete the task into one that solved it efficiently and consistently.
+
+### Computational Efficiency
+
+Despite the enhanced model's deeper architecture and expanded capabilities, the overall computational efficiency remained reasonable:
+
+| Performance Metric | Baseline Model | Enhanced Model |
+|-------------------|---------------|----------------|
+| Average inference time | Comparable | Slightly increased |
+| Training time to first success | Never succeeded | ~18 episodes |
+| Overall convergence time | ~500 episodes | ~300 episodes |
+
+While the enhanced model required more computation per episode due to its deeper architecture, the dramatic reduction in required training episodes (40% fewer to reach convergence) resulted in an overall more efficient training process.
+
+### Conclusion
+
+Our evaluation demonstrates that the enhanced StealthEscape agent represents a transformative improvement over the baseline model. The most compelling evidence is the stark contrast in task completion: while the baseline model never completed the maze despite a week of continuous training, the enhanced model consistently reached the goal after just 18 episodes on average.
+
+The smoother, faster convergence of both reward and loss metrics indicates that our improvements to the model architecture and training methodology addressed fundamental limitations in the baseline approach. The expanded observation and action spaces were particularly crucial, allowing the agent to develop a much more comprehensive understanding of its environment.
+
+These results validate our hypothesis that providing richer environmental context and more nuanced movement capabilities, combined with improved learning mechanisms, would dramatically enhance the agent's ability to navigate complex environments while avoiding hazards and guards. The success of our enhanced model in completing mazes that were impossible for the baseline model confirms the effectiveness of our approach.
 
 ## References  
 - [Project Malmo Documentation](https://www.microsoft.com/en-us/research/project/project-malmo/)  
