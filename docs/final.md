@@ -98,9 +98,10 @@ The enhanced model showed remarkable improvements in learning efficiency and ove
 | Episodes until first goal completion | Never reached | 18 | Infinite improvement |
 | Cumulative reward convergence | 0.55 | 0.9 | 63.6% higher |
 
-(pic here)
+<img src="./images/graph2.png" alt="Minecraft Image" style="max-width: 48%; height: auto;">  
 
 *Figure 1: Learning curves showing average reward per episode during training. The baseline model (blue) slowly converges to 0.7 over 500 episodes, while the enhanced model (orange) reaches 0.9 in just 300 episodes.*
+
 
 A key finding was that despite running the baseline model for approximately one week of continuous training, it never successfully completed the maze. In stark contrast, our enhanced model began reaching the goal consistently after just 18 episodes on average, even in more complex maze configurations.
 
@@ -111,7 +112,7 @@ The training stability between models showed significant differences:
 - The baseline model's loss started at approximately 1.0 and decreased to around 0.2 after 500 episodes, but with considerable fluctuation
 - Our enhanced model demonstrated a much steadier downward trend in loss, indicating more stable and consistent learning
 
-(pic here)
+<img src="./images/graph1.png" alt="Minecraft Image" style="max-width: 48%; height: auto;"> 
 
 *Figure 2: Comparison of loss function during training for baseline (blue) and enhanced (orange) models. The enhanced model shows a more consistent, stable decreasing trend.*
 
