@@ -198,8 +198,6 @@ These results validate our hypothesis that providing richer environmental contex
 - [Enjoy AI in Minecraft](https://tsmatz.wordpress.com/2020/07/09/minerl-and-malmo-reinforcement-learning-in-minecraft/)  
 - Libraries Used: Malmo, Torch, Numpy
 
-- [Here is our Project GitHub Repository!]() 
-
 ## AI Tool Usage  
 AI tools such as ChatGPT and DeepSeek were used for simple code debugging purposes and to help understand the Malmo documentation. For example, understanding how to use XML to help design
 the missions. 
